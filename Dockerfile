@@ -3,7 +3,7 @@ FROM alpine:latest
 COPY start-tun.sh /
 COPY stop-tun.sh /
 
-RUN apk add --no-cache iptables && \
+RUN apk add --no-cache iptables ipset iproute2 && \
     chmod +x /start-tun.sh /stop-tun.sh
 
 ENV TUN_USER=root \
