@@ -9,7 +9,7 @@ RUN apk add --no-cache iptables && \
 ENV TUN_USER=root \
     TUN_DEVICE=utun0 \
     MTU=9000 \
-    ROUTE_TABLE=0x162
+    ROUTE_TABLE=0x162 \
     FWMARK=0x162
 
 ENTRYPOINT ["/start-tun.sh"]
